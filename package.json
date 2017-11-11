@@ -1,0 +1,41 @@
+{
+  "name": "@ournet/places-domain",
+  "version": "0.1.0",
+  "description": "Ournet places domain",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "pretest": "npm run clean && npm run tsc",
+    "test": "ava --no-cache lib/**/*.spec.js",
+    "tsc": "tsc",
+    "tscw": "tsc -w",
+    "preversion": "npm run tsc",
+    "postversion": "git push --follow-tags",
+    "prepublishOnly": "npm run tsc",
+    "clean": "rm -fr ./lib && rm -fr ./types"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ournet/places-domain.git"
+  },
+  "keywords": [
+    "ournet",
+    "places",
+    "geonames",
+    "domain"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ournet/places-domain/issues"
+  },
+  "homepage": "https://github.com/Ournet/places-domain",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^8.x.x",
+    "ava": "^0.23.0"
+  }
+}

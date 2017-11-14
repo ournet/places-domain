@@ -3,7 +3,7 @@
 
 import { UpdateUseCase as BaseUpdateUseCase } from '@ournet/domain';
 import { IPlace } from '../entities/Place';
-import { PlaceValidator } from '../validators';
+import { PlaceValidator } from '../validators/PlaceValidator';
 import { IPlaceRepository } from './PlaceRepository';
 
 export class PlaceUpdateUseCase extends BaseUpdateUseCase<number, IPlace> {

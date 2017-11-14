@@ -48,3 +48,8 @@ export enum PlaceFields {
 
     wikiId = 'wikiId'
 }
+
+export interface IOldPlaceId {
+    id: number
+    geoanmeid: number
+}

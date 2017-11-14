@@ -1,9 +1,10 @@
 
 import test from 'ava';
 import { PlaceValidator } from './PlaceValidator';
+import { IPlace } from '../entities/Place';
 
 test('invalid create place', t => {
-    const id1 = { id: 1, name: 'Name 1', longitude: 1.1, latitude: 1.2, featureClass: 'P', featureCode: 'PPL', countryCode: 'RU', timezone: 'TZ' };
+    const id1: IPlace = { id: 1, name: 'Name 1', longitude: 1.1, latitude: 1.2, featureClass: 'P', featureCode: 'PPL', countryCode: 'RU', timezone: 'TZ' };
 
     t.throws(() => PlaceValidator.instance.create(updateObj(id1, 'name', undefined)), /"name" is required/, 'name is required (undefined)');
     t.throws(() => PlaceValidator.instance.create(updateObj(id1, 'name', null)), /"name" must be a string/, '"name" must be a string');
@@ -27,7 +28,7 @@ test('invalid update place', t => {
 });
 
 test('valid create place', t => {
-    const id1 = { id: 1, name: 'Name 1 ', longitude: 1.1, latitude: 1.2, featureClass: 'P', featureCode: 'PPL', countryCode: 'RU', timezone: 'TZ' };
+    const id1: IPlace = { id: 1, name: 'Name 1 ', longitude: 1.1, latitude: 1.2, featureClass: 'P', featureCode: 'PPL', countryCode: 'RU', timezone: 'TZ' };
 
     const rid1 = PlaceValidator.instance.create(id1);
 

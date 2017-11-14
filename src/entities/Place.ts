@@ -1,6 +1,8 @@
 
 // import { IPlaceWiki } from './PlaceWiki';
 
+export type PlaceFeatureClassType = 'A' | 'H' | 'L' | 'P' | 'R' | 'S' | 'T' | 'U' | 'V';
+
 export interface IPlace {
     id: number
     name?: string
@@ -8,7 +10,7 @@ export interface IPlace {
     names?: string
     latitude?: number
     longitude?: number
-    featureClass?: string
+    featureClass?: PlaceFeatureClassType
     featureCode?: string
     countryCode?: string
     admin1Code?: string

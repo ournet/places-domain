@@ -33,9 +33,13 @@
     "url": "https://github.com/Ournet/places-domain/issues"
   },
   "homepage": "https://github.com/Ournet/places-domain",
-  "dependencies": {},
+  "dependencies": {
+    "joi": "^13.0.2"
+  },
   "devDependencies": {
+    "@types/joi": "^13.0.0",
     "@types/node": "^8.x.x",
-    "ava": "^0.23.0"
+    "ava": "^0.23.0",
+    "typescript": "^2.6.1"
   }
 }

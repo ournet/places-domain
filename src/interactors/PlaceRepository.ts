@@ -8,4 +8,5 @@ export interface IPlaceRepository extends IRepository<number, IPlace> {
     getAdmin1(data: { country: string, admin1Code: string }, options?: RepAccessOptions<IPlace>): Promise<IPlace>
     getPlacesInAdmin1(data: { country: string, admin1Code: string, limit: number }, options?: RepAccessOptions<IPlace>): Promise<IPlace[]>
     getOldPlaceId(id: number): Promise<IOldPlaceId>
+    getMainPlaces(data: { country: string, limit: number }, options?: RepAccessOptions<IPlace>): Promise<IPlace[]>
 }

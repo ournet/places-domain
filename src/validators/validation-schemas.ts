@@ -10,6 +10,7 @@ const wikiIdRegex = /^Q\d+$/;
 const createPlaceObj = Joi.object().keys({
     id: Joi.number().integer().positive().required(),
     name: Joi.string().trim().min(1).max(placeNameMaxLength).required(),
+    asciiname: Joi.string().trim().min(1).max(placeNameMaxLength).required(),
     names: Joi.string().trim(),
     latitude: Joi.number().precision(4).required(),
     longitude: Joi.number().precision(4).required(),
@@ -32,6 +33,7 @@ export const createPlaceSchema = createPlaceObj.required();
 const updatePlaceObj = Joi.object().keys({
     id: Joi.number().integer().positive().required(),
     name: Joi.string().trim().min(1).max(placeNameMaxLength),
+    asciiname: Joi.string().trim().min(1).max(placeNameMaxLength),
     names: Joi.string().trim(),
     latitude: Joi.number().precision(4),
     longitude: Joi.number().precision(4),

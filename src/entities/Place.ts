@@ -27,6 +27,8 @@ export interface IPlace {
 
     wikiId?: string
     // wiki?: IPlaceWiki
+
+    admin1?: IPlace
 }
 
 export enum PlaceFields {

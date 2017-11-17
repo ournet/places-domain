@@ -30,7 +30,9 @@ export class PlaceHelpers {
                 langNames.unshift(preferred);
             }
 
-            return langNames.map(item => PlaceHelpers.formatName(item.name, item.lang)).join(SEPARATOR);
+            const list = langNames.map(item => PlaceHelpers.formatName(item.name, item.lang));
+            // uniq
+            return list.filter((v, i, a) => a.indexOf(v) === i).join(SEPARATOR);
         }).join(SEPARATOR);
     }
 

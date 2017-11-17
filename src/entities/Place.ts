@@ -17,7 +17,7 @@ export interface IPlace {
     admin2Code?: string
     admin3Code?: string
     population?: number
-    elevation?: string
+    elevation?: number
     dem?: number
     timezone?: string
     /**

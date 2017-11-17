@@ -44,7 +44,7 @@ const updatePlaceObj = Joi.object().keys({
     admin2Code: Joi.string().trim().min(1).max(10),
     admin3Code: Joi.string().trim().min(1).max(10),
     population: Joi.number().integer().positive(),
-    elevation: Joi.string().trim().min(1).max(10),
+    elevation: Joi.number(),
     dem: Joi.number(),
     timezone: Joi.string(),
     wikiId: Joi.string().regex(wikiIdRegex),

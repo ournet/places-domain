@@ -1,5 +1,6 @@
 
 import * as Joi from 'joi';
+import { PlaceValidDeleteFields } from '../entities/Place';
 
 const placeNameMaxLength = 200;
 const placeFeatureClasses = ['A', 'H', 'L', 'P', 'R', 'S', 'T', 'U', 'V'];
@@ -51,4 +52,7 @@ const updatePlaceObj = Joi.object().keys({
     updatedAt: Joi.number().min(0).required()
 });
 
-export const updatePlaceSchema = updatePlaceObj.required();
+export const updatePlaceSchema = Joi.object().keys({
+    item: updatePlaceObj.required(),
+    delete: Joi.array().items(Joi.string().valid(PlaceValidDeleteFields))
+}).required();

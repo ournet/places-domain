@@ -5,7 +5,7 @@ import { createPlaceSchema, updatePlaceSchema } from './validation-schemas';
 
 export class PlaceValidator extends Validator<IPlace> {
     constructor() {
-        super(createPlaceSchema, updatePlaceSchema);
+        super({ schema: createPlaceSchema }, { schema: updatePlaceSchema });
     }
 
     private static _instance: PlaceValidator;
@@ -17,4 +17,6 @@ export class PlaceValidator extends Validator<IPlace> {
 
         return PlaceValidator._instance;
     }
+
+
 }

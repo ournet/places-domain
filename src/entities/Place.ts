@@ -53,6 +53,8 @@ export enum PlaceFields {
     wikiId = 'wikiId'
 }
 
+export const PlaceValidDeleteFields = ['names', 'admin2Code', 'admin3Code', 'elevation', 'dem', 'wikiId'];
+
 export interface IOldPlaceId {
     id: number
     geoanmeid: number

@@ -25,6 +25,8 @@ test('invalid update place', t => {
 
     t.throws(() => PlaceValidator.instance.update({ item: { id: 1, updatedAt: 111, countryCode: null } }), /"countryCode" must be a string/, 'countryCode must be a string');
     t.throws(() => PlaceValidator.instance.update({ item: { id: 1, updatedAt: 111, countryCode: 'MDA' } }), /"countryCode" length must be 2 characters long/, '"countryCode" length must be 2 characters long');
+
+    t.throws(() => PlaceValidator.instance.update({ item: { id: 1, updatedAt: 111 }, delete: ['id'] }), /child "delete" fails/, 'cannot delete a reaquired field');
 });
 
 test('valid create place', t => {

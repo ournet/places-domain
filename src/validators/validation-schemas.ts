@@ -4,7 +4,7 @@ import { PlaceValidDeleteFields } from '../entities/Place';
 
 const placeNameMaxLength = 200;
 const placeFeatureClasses = ['A', 'H', 'L', 'P', 'R', 'S', 'T', 'U', 'V'];
-const adminCodeMaxLength = 16;
+const adminCodeMaxLength = 50;
 
 const wikiIdRegex = /^Q\d+$/;
 

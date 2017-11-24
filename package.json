@@ -1,6 +1,6 @@
 {
   "name": "@ournet/places-domain",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Ournet places domain",
   "main": "./lib/index.js",
   "types": "./types/index.d.ts",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/Ournet/places-domain",
   "dependencies": {
-    "@ournet/domain": "^0.1.0",
+    "@ournet/domain": "^0.1.4",
     "joi": "^13.0.2"
   },
   "devDependencies": {

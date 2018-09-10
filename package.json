@@ -1,9 +1,9 @@
 {
   "name": "@ournet/places-domain",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Ournet places domain",
   "main": "./lib/index.js",
-  "types": "./types/index.d.ts",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "pretest": "npm run clean && npm run tsc",
     "test": "ava --no-cache --verbose lib/**/*.test.js",
@@ -13,11 +13,11 @@
     "preversion": "npm run tsc",
     "postversion": "git push --follow-tags",
     "prepublishOnly": "npm run tsc && npm run clean-test-code",
-    "clean": "rm -fr ./lib && rm -fr ./types",
-    "clean-test-code": "rm -fr ./lib/**/*.test.js && rm -fr ./types/**/*.test.d.ts"
+    "clean": "rimraf ./lib",
+    "clean-test-code": "rimraf ./lib/**/*.test.js && rimraf ./lib/**/*.test.d.ts"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "repository": {
     "type": "git",
@@ -36,13 +36,12 @@
   },
   "homepage": "https://github.com/Ournet/places-domain",
   "dependencies": {
-    "@ournet/domain": "^0.1.4",
-    "joi": "^13.0.2"
+    "joi": "^13.6.0"
   },
   "devDependencies": {
-    "@types/joi": "^13.0.0",
-    "@types/node": "^8.x.x",
+    "@types/joi": "^13.4.4",
+    "@types/node": "latest",
     "ava": "^0.23.0",
-    "typescript": "^2.6.1"
+    "typescript": "latest"
   }
 }

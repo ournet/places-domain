@@ -1,9 +1,9 @@
 
-import { IDictionary } from '@ournet/domain';
+import { Dictionary } from '@ournet/domain';
 
 const SEPARATOR = '|';
 
-export class PlaceHelpers {
+export class PlaceHelper {
 
     static formatNames(names: { name: string, lang: string, isPreferred?: boolean }[]): string {
         names = names.map(item => {
@@ -14,7 +14,7 @@ export class PlaceHelpers {
             }
         });
 
-        const namesByLang = names.reduce<IDictionary<{ name: string, lang: string, isPreferred?: boolean }[]>>(function (r, a) {
+        const namesByLang = names.reduce<Dictionary<{ name: string, lang: string, isPreferred?: boolean }[]>>(function (r, a) {
             r[a.lang] = r[a.lang] || [];
             r[a.lang].push(a);
             return r;
@@ -30,7 +30,7 @@ export class PlaceHelpers {
                 langNames.unshift(preferred);
             }
 
-            const list = langNames.map(item => PlaceHelpers.formatName(item.name, item.lang));
+            const list = langNames.map(item => PlaceHelper.formatName(item.name, item.lang));
             // uniq
             return list.filter((v, i, a) => a.indexOf(v) === i).join(SEPARATOR);
         }).join(SEPARATOR);
@@ -41,7 +41,7 @@ export class PlaceHelpers {
     }
 
     static parseNames(names: string): { name: string, lang: string }[] {
-        return names.split(/\|/g).map(name => PlaceHelpers.parseName(name));
+        return names.split(/\|/g).map(name => PlaceHelper.parseName(name));
     }
 
     static parseName(name: string): { name: string, lang: string } {

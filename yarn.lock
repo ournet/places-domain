@@ -59,15 +59,14 @@
     pretty-ms "^0.2.1"
     text-table "^0.2.0"
 
-"@ournet/domain@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@ournet/domain/-/domain-0.3.3.tgz#549e495b41141b596e816c0eef705d4bbea6c0fd"
-  integrity sha512-YilpjstmvRJ1Mq8+mEabp6iT6M5U/RBzCoq3p55bqW3qMXaTHtDixXqZOcF9YqR+pLLgc2KsNcRKkyJAW+FPIA==
+"@ournet/domain@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@ournet/domain/-/domain-0.3.6.tgz#d4b217fd5829410da595155454ef19a287a4a30a"
+  integrity sha512-hvlIlD2tvCeMFXfiIptlKmFc8pc+hom4+sefxYTAlu3UcmXx7DJ3Z59K14PGXCl/zVN7d78GBF0Gb+mfAa7PHg==
   dependencies:
     atonic "^1.0.4"
-    ava "^0.25.0"
     joi "^14.0.3"
-    normalize-url "^3.2.0"
+    normalize-url "^4.5.1"
 
 "@types/joi@^14.0.0":
   version "14.0.0"
@@ -2454,10 +2453,10 @@ normalize-path@^2.0.0, normalize-path@^2.0.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
-normalize-url@^3.2.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
-  integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+normalize-url@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.1.tgz#0dd90cf1288ee1d1313b87081c9a5932ee48518a"
+  integrity sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==
 
 npm-bundled@^1.0.1:
   version "1.0.5"
